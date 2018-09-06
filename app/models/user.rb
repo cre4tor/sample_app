@@ -71,7 +71,9 @@ class User < ApplicationRecord
 
   #アカウントを有効にする
   def activate
-    update_columns(activated: true, activted_at: Time.zone.now)
+    update_attribute(:activated, true)
+    update_attribute(:activated_at, Time.zone.now)
+    #update_columns(activated: true, activted_at: Time.zone.now) ←にするとtestがREDになる(原因分からない)
   end
 
   #有効用のメールを送信する
