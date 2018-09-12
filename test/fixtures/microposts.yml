@@ -25,7 +25,7 @@ micropost_<%= n %>:
   user: michael
 <% end %>
 
-nts:
+ants:
   content: "Oh, is that what you want? Because that's how you get ants!"
   created_at: <%= 2.years.ago %>
   user: archer
